@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title> 3vg</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div>
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Login Form</ion-card-title>
+        <ion-card-subtitle *ngIf= "errormsg">{{errormsg}}</ion-card-subtitle>
+      </ion-card-header>
+    
+      <ion-card-content>
+        <form #form="ngForm" (ngSubmit)="loginUser()">
+          <ion-item>
+            <ion-label position="floating">Email</ion-label>
+            <ion-input #emailField = 'ngModel' [(ngModel)]="User.email" required name = 'email' type="email"></ion-input>
+            <small [hidden] = "emailField.valid || emailField.untouched">email is required</small>
+          </ion-item>
+  
+          <ion-item>
+            <ion-label position="floating" >Password</ion-label>
+            <ion-input type="password" #passwordField = 'ngModel' [(ngModel)]="User.password" required name = 'password'></ion-input>
+            <small [hidden] = "passwordField.valid || passwordField.untouched">email is required</small>
+          </ion-item> 
+  
+          <div class="btn">
+            <ion-button  type="submit">submit</ion-button>
+          </div>
+  
+        </form>
+  
+      </ion-card-content>
+    </ion-card>
+  </div>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-title><small>&copy; 2021 myapps.com</small></ion-title>
+  </ion-toolbar>
+</ion-footer>

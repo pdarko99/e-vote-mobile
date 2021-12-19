@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>3vg</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div *ngIf = "!ifVoted || !endTime"> 
+    
+  <ion-list *ngFor = "let candidate of allCands">
+    <ion-item-divider sticky=true>
+      <ion-label> {{candidate.position}} </ion-label>
+    </ion-item-divider>
+  
+    <ion-item *ngFor = "let cand of candidate.candidates ">
+      <ion-avatar slot="start">
+        <img [src]=cand.pic [alt]="cand.firstname" />
+      </ion-avatar>
+      <ion-label>
+        <h2>{{cand.firstname}} {{cand.lastname}}</h2>
+      </ion-label>
+     
+      <ion-button (click)="selected(candidate.position, cand._id, cand.firstname)">Vote</ion-button>
+      </ion-item>
+  
+      
+    </ion-list>
+
+
+   
+
+    <div class="submitbtn">
+
+      <ion-button (click)="presentAlertConfirm()">Submit Votes</ion-button>
+    </div>
+  </div>
+  <div *ngIf = "ifVoted || endTime" >
+    <h3>ooops we couldn't find the page you were looking for please try using the appropriate means</h3>
+  </div>
+
+
+
+  
+  
+  </ion-content>
+
+  <ion-footer>
+    <ion-toolbar>
+      <ion-title><small>&copy; 2021 myapps.com</small></ion-title>
+    </ion-toolbar>
+  </ion-footer>

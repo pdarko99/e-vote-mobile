@@ -1,0 +1,31 @@
+
+ion-item-divider{
+    --background:rgb(6, 17, 60)
+}
+
+.submitbtn{
+    text-align:center;
+    margin-top: 30px;
+}
+
+.submitbtn > ion-button{
+    --border-radius: 20px;
+}
+
+
+div{
+    width: 80%;
+    margin: auto;
+    min-height: 90%;
+
+}
+
+@media only screen and (min-width: 800px) {
+    ion-item > ion-button{
+        width: 60px;
+      
+    }
+    div{
+        width: 60%;
+    }
+}

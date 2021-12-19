@@ -1,0 +1,44 @@
+
+
+<ion-content>
+  <div>
+    <ion-list *ngFor = "let candidate of candidates">
+      <ion-item-divider sticky=true>
+        <ion-label> {{candidate.position}} </ion-label>
+      </ion-item-divider>
+    
+      <ion-item *ngFor = "let cand of candidate.candidates ">
+        <ion-avatar slot="start">
+          <img [src]=cand.pic [alt]="cand.firstname" />
+        </ion-avatar>
+        <ion-label>
+          <h2>{{cand.firstname}}</h2>
+        </ion-label>
+        <ion-label>
+          <h2>{{cand.totalvotes}} v(s)</h2>
+        </ion-label>
+        <ion-label>
+          <ion-progress-bar class="percentage" [value]=returnpercentage(cand.totalvotes)></ion-progress-bar>
+        </ion-label>
+        <h5>{{cand.totalvotes / allRegVotersLen | percent:'1.2'}}</h5>
+        </ion-item>
+    
+        
+      </ion-list>
+   
+      <div>
+        <p>totalVotes cast : </p> 
+        <p>{{voters.length}}</p>
+      </div>
+  
+      <div>
+        <p>total Registered Voters: </p> 
+        <p>{{allRegVotersLen}}</p>
+      </div>
+  </div>
+
+
+ 
+</ion-content>
+
+

@@ -24,3 +24,32 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+// ion-content{
+//     --ion-background-color:#06112f;
+// }
+
+ion-toolbar{
+  --background: rgb(6, 17, 47);
+  --color: rgb(255, 255, 255);
+}
+
+
+ion-footer > ion-toolbar {
+  text-align: center;
+}
+
+@media only screen and (min-width: 800px) {
+  
+
+  ion-header{
+      width: 80%;
+      margin:auto;
+  }
+}
+
+// ion-header{
+//     --background: rgb(6, 17, 47);
+//   --color: rgb(255, 255, 255);
+// }
+

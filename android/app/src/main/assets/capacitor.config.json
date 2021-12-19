@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "evmobile",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
