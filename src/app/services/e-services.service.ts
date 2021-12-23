@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
-
+import {environment} from "../../environments/environment.prod"
 @Injectable({
   providedIn: 'root'
 })
@@ -10,7 +10,7 @@ export class EServicesService {
   endTime!: string 
   startdate!: string
   constructor(private http: HttpClient) { }
-  url = 'http://localhost:5000'
+  url = environment.url
   ogrId = JSON.parse(localStorage.getItem('orgId')!)
 
   getAllOrgs(): Observable<any>{
