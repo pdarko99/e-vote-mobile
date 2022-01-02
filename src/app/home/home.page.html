@@ -1,4 +1,4 @@
-<ion-header #headerwrapper>
+<ion-header>
   <ion-toolbar>
     <ion-title>
       3vg
@@ -8,10 +8,10 @@
 
 <ion-content [fullscreen]="true">
   <div>
-    <ion-header #condenseheader>
+    <ion-header>
       <ion-toolbar>
         <div class="search">
-          <ion-input placeholder="start by searching an organization" (keyup)="fire($event)" [(ngModel)]='userInput' (click)="toggleSearch()" [class.active-search]="searching" [class.inactive-search]="!searching">
+          <ion-input placeholder="start by searching an organization" (keyup)="fire($event)" [(ngModel)]='userInput'>
             <ion-icon name="search"></ion-icon>
           </ion-input>
         </div>
