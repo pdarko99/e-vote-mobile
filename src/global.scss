@@ -33,7 +33,11 @@ ion-toolbar{
   --background: rgb(6, 17, 47);
   --color: rgb(255, 255, 255);
 }
+ion-content{
+  --ion-background-color: #06112f;
+  --ion-background-color-rgb: 6, 17, 47;
 
+}
 
 ion-footer > ion-toolbar {
   text-align: center;
