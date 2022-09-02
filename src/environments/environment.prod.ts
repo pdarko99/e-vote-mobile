@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  url: "https://mighty-meadow-57523.herokuapp.com"
+  url: "https://morning-bayou-10582.herokuapp.com"
 };
